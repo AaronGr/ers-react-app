@@ -5,6 +5,7 @@ import Login from './components/Login/Login';
 import UserTable from './containers/UserTable/UserTable';
 import ReimbursementTable from './containers/ReimbursementTable/ReimbursementTable';
 import UserUpdatePage from './containers/UserUpdatePage/UserUpdatePage';
+import ReimbursementUpdatePage from './containers/ReimbursementUpdatePage/ReimbursementUpdatePage';
 
 class App extends Component {
   render() {
@@ -15,8 +16,8 @@ class App extends Component {
               <Route path="/users" component={UserTable} />
               <Route path="/reimbursements" component={ReimbursementTable} />
               <Route path="/update-user" component={UserUpdatePage} />
+              <Route path="/update-reimbursement" component={ReimbursementUpdatePage} />
           </Layout>
- 
       </div>
     );
   }

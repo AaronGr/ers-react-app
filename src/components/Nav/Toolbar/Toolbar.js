@@ -41,6 +41,9 @@ class Toolbar extends Component {
                         <LinkContainer to="/reimbursements">
                             <Nav.Link>Reimbursements</Nav.Link>
                         </LinkContainer>
+                        <LinkContainer to="/update-reimbursement">
+                            <Nav.Link>Update Reimbursements</Nav.Link>
+                        </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
