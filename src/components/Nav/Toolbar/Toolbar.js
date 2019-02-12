@@ -35,6 +35,9 @@ class Toolbar extends Component {
                         <LinkContainer to="/users">
                             <Nav.Link>Users</Nav.Link>
                         </LinkContainer>
+                        <LinkContainer to="/update-user">
+                            <Nav.Link>Update User</Nav.Link>
+                        </LinkContainer>
                         <LinkContainer to="/reimbursements">
                             <Nav.Link>Reimbursements</Nav.Link>
                         </LinkContainer>
