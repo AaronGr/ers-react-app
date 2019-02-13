@@ -49,7 +49,7 @@ class Login extends Component {
         const { errorFeedback } = this.state;
         return (
             <> 
-            {this.state.authenticated ? <h1>You are Logged in!</h1>
+            {this.context.authenticated ? <h1>You are Logged in!</h1>
             : 
             <Container>
                     <Form onSubmit={this.onSignIn}>

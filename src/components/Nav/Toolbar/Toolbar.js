@@ -28,10 +28,7 @@ class Toolbar extends Component {
                     <Nav className="mr-auto">
                         <LinkContainer to="/home">
                             <Nav.Link>Home</Nav.Link>
-                        </LinkContainer>
-                            <LinkContainer to="/login">
-                                <Nav.Link>Login</Nav.Link>
-                            </LinkContainer>                        
+                        </LinkContainer>                      
                         <LinkContainer to="/users">
                             <Nav.Link>Users</Nav.Link>
                         </LinkContainer>

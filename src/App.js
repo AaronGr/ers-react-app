@@ -7,12 +7,14 @@ import ReimbursementTable from './containers/ReimbursementTable/ReimbursementTab
 import UserUpdatePage from './containers/UserUpdatePage/UserUpdatePage';
 import ReimbursementUpdatePage from './containers/ReimbursementUpdatePage/ReimbursementUpdatePage';
 import ReimbursementSubmissionPage from './containers/ReimbursementSubmissionPage/ReimbursementSubmissionPage';
+import Homepage from './containers/Homepage/Homepage';
 
 class App extends Component {
   render() {
     return (
       <div>        
           <Layout>
+              <Route path="/home" component={Homepage} />
               <Route path="/login" component={Login} />
               <Route path="/users" component={UserTable} />
               <Route path="/reimbursements" component={ReimbursementTable} />
