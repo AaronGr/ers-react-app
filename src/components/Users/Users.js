@@ -8,7 +8,6 @@ const users = (props) => {
            return (
             <User 
                     key={user.userId}
-                    id={user.userId}
                     firstName={user.firstName}
                     lastName={user.lastName}
                     username={user.username}

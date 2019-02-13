@@ -3,7 +3,6 @@ import React from 'react';
 const reimbursement = (props) => {
     return (
         <tr>
-            <td>{props.id}</td>
             <td>{props.author}</td>
             <td>{props.amount}</td>
             <td>{props.submitted}</td>

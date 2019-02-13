@@ -30,7 +30,6 @@ class ReimbursementTable extends Component {
             <Table striped bordered hover>
                 <thead>
                     <tr>
-                        <th>#</th>
                         <th>Author</th>
                         <th>Amount</th>
                         <th>Submitted</th>

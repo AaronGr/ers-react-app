@@ -8,7 +8,6 @@ const reimbursements = (props) => {
            return (
             <Reimbursement 
                     key={reimbursements.reimbursementId}
-                    id={reimbursements.reimbursementId}
                     author={reimbursements.author.username}
                     amount={reimbursements.amount}
                     submitted={reimbursements.dateSubmitted}
