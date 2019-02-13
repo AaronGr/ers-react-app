@@ -12,7 +12,7 @@ class ReimbursementTable extends Component {
 
     async componentDidMount() {
         try {
-            const res = await ersClient.get('reimbursements/status/2');
+            const res = await ersClient.get('reimbursements/');
             let reimbursementsReceived = [...this.state.reimbursements];
             reimbursementsReceived = res.data;
             this.setState({reimbursements: reimbursementsReceived});

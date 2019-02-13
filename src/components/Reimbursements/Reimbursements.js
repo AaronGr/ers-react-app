@@ -7,16 +7,16 @@ const reimbursements = (props) => {
         reimbursements = props.reimbursements.map(reimbursements => {
            return (
             <Reimbursement 
-                    key={reimbursements.reimbursementid}
-                    id={reimbursements.reimbursementid}
-                    author={reimbursements.author}
+                    key={reimbursements.reimbursementId}
+                    id={reimbursements.reimbursementId}
+                    author={reimbursements.author.username}
                     amount={reimbursements.amount}
-                    submitted={reimbursements.datesubmitted}
-                    resolved={reimbursements.dateresolved}
-                    resolver={reimbursements.resolver}
+                    submitted={reimbursements.dateSubmitted}
+                    resolved={reimbursements.dateResolved}
+                    resolver={reimbursements.resolver.username}
                     description={reimbursements.description}
-                    status={reimbursements.status}
-                    reimbType={reimbursements.type}
+                    status={reimbursements.status.status}
+                    reimbType={reimbursements.type.type}
                 />
            )
        }) 
