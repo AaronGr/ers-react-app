@@ -51,10 +51,12 @@ class Login extends Component {
         return (
             <> 
             {this.context.authenticated ? <h1>You're logged in!</h1>
-            : 
+            :
+            <>
+            <br /> <br />
             <Container>
                     <Form onSubmit={this.onSignIn}>
-                        <Form.Row>
+                        <Form.Row className="justify-content-md-center">
                             <Form.Group controlId="username">
                                 <Form.Label>Username</Form.Label>
                                 <Form.Control 
@@ -63,7 +65,7 @@ class Login extends Component {
                                     onChange={this.onUsernameChange} />
                             </Form.Group>
                         </Form.Row>
-                        <Form.Row>
+                        <Form.Row className="justify-content-md-center">
                             <Form.Group controlId="password">
                                 <Form.Label>Password</Form.Label>
                                 <Form.Control 
@@ -71,13 +73,16 @@ class Login extends Component {
                                     placeholder="Password"
                                     onChange={this.onPasswordChange} />
                             </Form.Group>
-                        </Form.Row>
+                        </Form.Row >
                         <p id="error-message">{errorFeedback}</p>
+                        <Form.Row className="justify-content-md-center">
                         <Button 
                             variant="primary" 
                             type="submit" >Sign In </Button>
+                        </Form.Row>
                     </Form>
-            </Container> 
+            </Container>
+            </>
             }
         </>
         )    

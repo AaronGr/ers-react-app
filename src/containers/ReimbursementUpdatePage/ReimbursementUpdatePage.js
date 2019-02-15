@@ -53,7 +53,6 @@ class ReimbursementUpdatePage extends Component {
 
     onUpdateSubmit = async (event) => {
         event.preventDefault();
-        console.log(this.state.amount);
         try {
             const jsonToSend = {
                 reimbursementId: this.state.reimbursementId,
@@ -61,14 +60,17 @@ class ReimbursementUpdatePage extends Component {
                 resolver: this.state.currentUser,
                 dateResolved: Date.now(),
                 type: {
+                    type: '',
                     typeId: this.state.type.typeId,
                 },
                 status: {
+                    status: '',
                     statusId: this.state.status.statusId
                 }
             }
             const res = await ersClient.patch('reimbursements', jsonToSend);
             console.log(res.data);
+            this.props.history.goBack();
             return res;
         } catch (err) {
             console.log(err);
@@ -97,7 +99,8 @@ class ReimbursementUpdatePage extends Component {
                             <Form.Label>Status</Form.Label>
                             <select 
                                 className="custom-select"
-                                defaultValue={this.state.status.statusId}>
+                                defaultValue={this.state.status.statusId}
+                                onChange={this.onStatusChange}>
                                 <option value="1">Pending</option>
                                 <option value="2">Approved</option>
                                 <option value="3">Denied</option>

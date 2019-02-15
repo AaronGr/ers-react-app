@@ -14,6 +14,7 @@ class App extends Component {
     return (
       <div>        
           <Layout>
+              
               <Route path="/home" component={Homepage} />
               <Route path="/login" component={Login} />
               <Route path="/users" component={UserTable} />
@@ -21,6 +22,7 @@ class App extends Component {
               <Route path="/update-user" component={UserUpdatePage} />
               <Route path="/update-reimbursement" component={ReimbursementUpdatePage} />
               <Route path="/submit-reimbursement" component={ReimbursementSubmissionPage} />
+              <Route path="" exact component={Homepage} />
           </Layout>
       </div>
     );

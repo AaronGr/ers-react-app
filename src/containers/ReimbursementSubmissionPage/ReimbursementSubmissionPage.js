@@ -48,6 +48,8 @@ class ReimbursementSubmissionPage extends Component {
                 type: this.state.type
             }
             const res = await ersClient.post('reimbursements', jsonToSend);
+            alert('Submission Successful');
+            this.props.history.goBack();
             console.log(res.data);
             return res;
         } catch (err) {
