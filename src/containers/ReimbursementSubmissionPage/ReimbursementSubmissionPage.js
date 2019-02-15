@@ -33,7 +33,7 @@ class ReimbursementSubmissionPage extends Component {
     }
 
     onTypeChange = (event) => {
-        this.setState({type: event.target.value})
+        this.setState({type: event.target.value});
     }
 
     onSubmitHandler = async (event) => {

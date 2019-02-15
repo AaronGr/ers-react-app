@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 
 const user = (props) => {
     return (
@@ -8,6 +9,11 @@ const user = (props) => {
             <td>{props.username}</td>
             <td>{props.email}</td>
             <td>{props.role}</td>
+            <td>
+                <Button
+                    variant="primary"
+                    onClick={props.updateClicked}>Update</Button>
+            </td>
         </tr>
     )
 }

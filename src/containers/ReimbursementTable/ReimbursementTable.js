@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import Table from 'react-bootstrap/Table';
+import { Table } from 'react-bootstrap';
 import { ersClient } from '../../axios/ers.client';
 import Reimbursements from '../../components/Reimbursements/Reimbursements'
+import AuthContext from '../../security/auth-context'
 
 class ReimbursementTable extends Component {
-    
+    static contextType = AuthContext;
     state = {
         reimbursements: [],
         errorFeedback: ''
@@ -38,9 +39,12 @@ class ReimbursementTable extends Component {
                         <th>Resolver</th>
                         <th>Status</th>
                         <th>Type</th>
+                        <th></th>
                     </tr>
                 </thead>
-                <Reimbursements reimbursements={this.state.reimbursements} />
+                <Reimbursements 
+                    reimbursements={this.state.reimbursements}
+                    currentUser={this.context.user.userId} />
             </Table>
         )       
     }

@@ -8,9 +8,16 @@ class Homepage extends Component {
     render() {
         return (
             <>
-                <h1>Welcome to Revature's Expense Reimbursement System.</h1>
-                <h1>Please log in:</h1>
-                <Login />
+            {this.context.authenticated ? 
+                <>
+                <h1>Hello {this.context.user.username}!</h1>
+                </>
+                    :
+                <>
+                    <h1>Welcome to Revature's Expense Reimbursement System.</h1>
+                    <Login />
+                </>
+            }
             </>
         )
     }

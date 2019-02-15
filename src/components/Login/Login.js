@@ -14,7 +14,8 @@ class Login extends Component {
             password: ''
         },
         authenticated: false,
-        errorFeedback: ''
+        errorFeedback: '',
+        user: null
     };
 
     onUsernameChange = (event) => {
@@ -49,7 +50,7 @@ class Login extends Component {
         const { errorFeedback } = this.state;
         return (
             <> 
-            {this.context.authenticated ? <h1>You are Logged in!</h1>
+            {this.context.authenticated ? <h1>You're logged in!</h1>
             : 
             <Container>
                     <Form onSubmit={this.onSignIn}>

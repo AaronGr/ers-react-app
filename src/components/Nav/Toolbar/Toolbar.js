@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Logo from '../../Logo/Logo';
 import { LinkContainer } from 'react-router-bootstrap';
 import authContext from '../../../security/auth-context';
+import { NavDropdown } from 'react-bootstrap';
 
 
 class Toolbar extends Component {
@@ -28,22 +29,20 @@ class Toolbar extends Component {
                     <Nav className="mr-auto">
                         <LinkContainer to="/home">
                             <Nav.Link>Home</Nav.Link>
-                        </LinkContainer>                      
+                        </LinkContainer>
+                        <NavDropdown title="Users">                      
                         <LinkContainer to="/users">
-                            <Nav.Link>Users</Nav.Link>
+                            <Nav.Link>View Users</Nav.Link>
                         </LinkContainer>
-                        <LinkContainer to="/update-user">
-                            <Nav.Link>Update User</Nav.Link>
-                        </LinkContainer>
-                        <LinkContainer to="/reimbursements">
-                            <Nav.Link>Reimbursements</Nav.Link>
-                        </LinkContainer>
-                        <LinkContainer to="/update-reimbursement">
-                            <Nav.Link>Update Reimbursements</Nav.Link>
-                        </LinkContainer>
-                        <LinkContainer to="/submit-reimbursement">
-                            <Nav.Link>Submit Reimbursements</Nav.Link>
-                        </LinkContainer>      
+                        </NavDropdown>
+                        <NavDropdown title="Reimbursements">
+                            <LinkContainer to="/reimbursements">
+                                <Nav.Link>View All</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/submit-reimbursement">
+                                <Nav.Link>Submit Reimbursements</Nav.Link>
+                            </LinkContainer>      
+                        </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

@@ -39,7 +39,8 @@ class UserTable extends Component {
                         <th>Role</th>
                     </tr>
                 </thead>
-                <Users users={this.state.users}/>
+                <Users 
+                    users={this.state.users}/>
             </Table>
         )       
     }

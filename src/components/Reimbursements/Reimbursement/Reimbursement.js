@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 
 const reimbursement = (props) => {
     return (
@@ -11,6 +12,11 @@ const reimbursement = (props) => {
             <td>{props.resolver}</td>
             <td>{props.status}</td>
             <td>{props.reimbType}</td>
+            <td>
+                <Button
+                    variant="primary"
+                    onClick={props.updateClicked}>Update</Button>
+            </td>
         </tr>
     )
 }
